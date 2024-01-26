@@ -115,7 +115,7 @@ const Login = ({setLoginmodal,loginmodal,setSignUpModal}) => {
                   </span>
                 </div>
                 <div>
-                 <Loginwithgoogle />
+                 <Loginwithgoogle setLoginmodal={setLoginmodal}/>
                 </div>
               </div>
               <div className={styles.loginModalSideIcon}>

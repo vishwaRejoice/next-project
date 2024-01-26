@@ -168,7 +168,7 @@ const SignUp = ({ signUpModal, setSignUpModal, setLoginmodal }) => {
                   </span>
                 </div>
                 <div>
-                 <Loginwithgoogle />
+                 <Loginwithgoogle setSignUpModal={setSignUpModal} signUpModal={signUpModal}/>
                 </div>
               </div>
               <div className={styles.loginModalSideIcon}>
