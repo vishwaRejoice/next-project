@@ -14,6 +14,7 @@ const HomePage = () => {
         <h1>hhhh</h1>
       </div>
 
+      <h1 style={{color:"white"}}>Demo Next Qr</h1>
       <Canvas
         text={"https://vi-demo-next.netlify.app/cart"}
         options={{
@@ -27,6 +28,11 @@ const HomePage = () => {
           },
         }}
       />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1 style={{color:"white"}}>26 January Photo Qr</h1>
       <Image
         text={` https://images.herzindagi.info/image/2022/Jan/republic-day-messages-main.jpg `}
         options={{

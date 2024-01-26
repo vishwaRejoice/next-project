@@ -167,7 +167,7 @@ const SignUp = ({ signUpModal, setSignUpModal, setLoginmodal }) => {
                     </p>{" "}
                   </span>
                 </div>
-                <div style={{ marginLeft: "200px" }}>
+                <div>
                  <Loginwithgoogle />
                 </div>
               </div>

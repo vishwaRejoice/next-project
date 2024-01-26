@@ -4,6 +4,7 @@ import { X } from 'react-feather';
 import Input from '@/shared/components/input';
 import Button from '@/shared/components/button';
 import { useRouter } from 'next/navigation';
+import Loginwithgoogle from '../loginwithgoogle';
 
 const EmailIcon = "/assets/icons/email-icon.png";
 const PasswordIcon = "/assets/icons/password-icon.png";
@@ -112,6 +113,9 @@ const Login = ({setLoginmodal,loginmodal,setSignUpModal}) => {
                       </span>
                     </p>{" "}
                   </span>
+                </div>
+                <div>
+                 <Loginwithgoogle />
                 </div>
               </div>
               <div className={styles.loginModalSideIcon}>
