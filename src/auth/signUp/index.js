@@ -8,13 +8,15 @@ import { X } from "react-feather";
 import Input from "@/shared/components/input";
 import toast from "react-hot-toast";
 import Loader from "@/shared/components/Loader";
+import Loginwithgoogle from "../loginwithgoogle";
 
 const UserIcon = "/assets/icons/user-icon.png";
 const EmailIcon = "/assets/icons/email-icon.png";
 const PasswordIcon = "/assets/icons/password-icon.png";
 const SignInImg = "/assets/images/signin-img.png";
+const GoogleLogo = "/assets/icons/google-icon.png";
 
-const SignUp = ({ signUpModal, setSignUpModal,setLoginmodal }) => {
+const SignUp = ({ signUpModal, setSignUpModal, setLoginmodal }) => {
   const [loader, setLoader] = useState(false);
   const [signUpData, setSignUpData] = useState({});
   const [errors, setErrors] = useState({});
@@ -56,6 +58,14 @@ const SignUp = ({ signUpModal, setSignUpModal,setLoginmodal }) => {
       setSignUpModal(false);
       setLoginmodal(true);
     }
+  };
+
+  const handleGoogleLogin = async () => {
+      try {
+      await signInWithPopup(auth,googleProvider);
+      } catch (err){
+        console.error(err);
+      }
   };
 
   return (
@@ -156,6 +166,9 @@ const SignUp = ({ signUpModal, setSignUpModal,setLoginmodal }) => {
                       </span>
                     </p>{" "}
                   </span>
+                </div>
+                <div style={{ marginLeft: "200px" }}>
+                 <Loginwithgoogle />
                 </div>
               </div>
               <div className={styles.loginModalSideIcon}>

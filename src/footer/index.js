@@ -24,6 +24,8 @@ const Footer = () => {
                 
                 <Link href="/">Home</Link>
                 <Link href="/about">About</Link>
+                <Link href="/sitemap-0.xml">Site map</Link>
+
                 {/* <Link href="/" target="blank">
                   sitemap
                 </Link> */}

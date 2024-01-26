@@ -31,7 +31,6 @@ const Header = () => {
                 <Link href="/">Home</Link>
                 <Link href="/about">About</Link>
                 <Link href="/cart">Cart</Link>
-                <Link href="/sitemap-0.xml">Site map</Link>
 
                 {/* <Link href="/">Home</Link> */}
              
