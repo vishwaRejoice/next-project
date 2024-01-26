@@ -1,0 +1,282 @@
+@import "../../../scss/styles/mixins/index.scss";
+
+
+.loginModalAlignment {
+  .loginModalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint("md-max") {
+      padding: 40px;
+    }
+
+    @include breakpoint("sm-max") {
+      padding: 20px;
+    }
+
+    .loginModalBox {
+      width: 900px;
+      height: auto;
+      border: 1px solid #363636;
+      background: #1E1E1E;
+      box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+
+      // padding: 40px 60px;
+      @include breakpoint("md-max") {
+        width: 100%;
+      }
+
+      .loginHeading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px;
+        border-radius: 16px 16px 0 0;
+        border-bottom: 1px solid #363636;
+
+        h4 {
+          font-size: 28px;
+          letter-spacing: -0.02em;
+          text-align: center;
+          color: #fff;
+          line-height: 34px;
+
+          @include breakpoint("sm-max") {
+            font-size: 22px;
+            line-height: 28px;
+          }
+
+        }
+
+        .closeAlignment {
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+
+      .loginBodyAlignment {
+        padding: 20px 40px;
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 40px;
+        align-items: center;
+
+        @include breakpoint("md-max") {
+          grid-template-columns: 1fr;
+        }
+
+        @include breakpoint("sm-max") {
+          padding: 16px;
+          max-height: calc(100vh - 100px);
+          overflow-y: auto;
+        }
+
+        .loginformAlignment {
+
+          .inputAlignment {
+            padding: 0 0 24px 0;
+
+            @include breakpoint("sm-max") {
+              padding: 0 0 16px 0;
+            }
+
+
+
+
+            input {
+              color: #FFF;
+              padding: 0 0 0 54px;
+
+              &.passwordAlignment {
+                padding: 0 36px 0 48px;
+              }
+            }
+
+            .forgotNotes {
+              p {
+                color: rgba(255, 255, 255, 0.85);
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.01em;
+                font-weight: 400;
+                display: block;
+              }
+
+            }
+
+            .inputNotes {
+              padding: 8px 0 0 8px;
+
+              p {
+                color: #b0abab;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.01em;
+                font-weight: 400;
+                display: block;
+
+
+                @include breakpoint("sm-max") {
+                  font-size: 14px;
+                  line-height: 21px;
+                }
+              }
+            }
+
+            .checkBoxDesign {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+
+              input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+              }
+
+              p {
+                color: rgba(255, 255, 255, 0.85);
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.01em;
+                font-weight: 400;
+                display: block;
+                cursor: pointer;
+              }
+
+              &:hover {
+                p {
+                  color: #2BF6FA;
+                }
+              }
+            }
+          }
+
+          .loginButton {
+            text-align: center;
+
+            button {
+              border-radius: 8px;
+              background: #2BF6FA;
+              color: #1E1E1E;
+              text-align: center;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 24px;
+              border: none;
+              cursor: pointer;
+              padding: 10px 34px;
+              width: 100%;
+
+              @include breakpoint("sm-max") {
+                padding: 8px 24px;
+                font-size: 14px;
+                line-height: 21px;
+              }
+
+            }
+          }
+
+          .lostYourPassword {
+            text-align: center;
+            padding: 12px 0 0 0;
+
+            @include breakpoint("sm-max") {
+              padding: 8px 0 0 0;
+            }
+
+            span {
+              font-size: 16px;
+              line-height: 24px;
+              cursor: pointer;
+              color: #797979;
+
+
+
+              @include breakpoint("sm-max") {
+                font-size: 14px;
+                line-height: 21px;
+              }
+            }
+
+            span:last-child {
+              margin: 0 0 0 4px;
+              color: #2BF6FA;
+            }
+          }
+        }
+
+        .loginModalSideIcon {
+          width: 100%;
+          height: auto;
+
+
+          @include breakpoint("md-max") {
+            display: none;
+
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+          }
+
+          &.forgotModalImg {
+            height: 260px;
+
+            img {
+              object-fit: contain;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+}
+
+.error {
+  color: red;
+}
+
+.spinner {
+  /* Add styles for your spinner here */
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #f7eded;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  /* Adding a simple rotation animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loginButton {
+  button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../scss/styles/mixins/index.scss";
+
+.container {
+  border-radius: 10px;
+  .heading {
+    h2 {
+      color: rgba(255, 255, 255, 0.95);
+      text-align: center;
+      font-weight: 400;
+      line-height: 21px;
+      max-width: 914px;
+      margin: 40px auto;
+      padding: 0 0 40px 0;
+    }
+  }
+}

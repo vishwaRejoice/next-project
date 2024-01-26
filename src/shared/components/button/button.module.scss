@@ -1,0 +1,64 @@
+@import "../../../../scss/styles/mixins/index.scss";
+
+
+
+.button {
+  @include breakpoint("md-max") {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @include breakpoint("sm-max") {
+    width: 100%;
+  }
+
+
+  button {
+    border-radius: 8px;
+    background: #2BF6FA;
+    padding: 0 18px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #1E1E1E;
+    border: none;
+    cursor: pointer;
+    height: 46px;
+    white-space: nowrap;
+
+    transition: .3s ease-in-out;
+    &:hover {
+      transform: translate(0 , -3px);
+      background: rgba(217, 217, 217, 0.10);
+      color: #fff;
+    }
+
+
+    @include breakpoint("sm-max") {
+
+      width: 100%;
+    }
+  }
+}
+
+.spinner {
+  /* Add styles for your spinner here */
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #f8f6f6;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  /* Adding a simple rotation animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

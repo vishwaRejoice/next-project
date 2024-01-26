@@ -1,0 +1,17 @@
+@import "../../scss/styles/mixins/index.scss";
+
+
+.wrapperSection {
+    background: #1E1E1E;
+    min-height: 100vh;
+    // background-image: url('../../public/assets/images/demo-back.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    .wrapperBg {
+        position: relative;
+        padding: 18px 0;
+    }
+}

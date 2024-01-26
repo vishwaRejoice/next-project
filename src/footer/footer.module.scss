@@ -1,0 +1,138 @@
+@import "../../scss/styles/mixins/index.scss";
+
+.footer {
+  @include breakpoint("md-max") {
+    padding: 20px;
+  }
+
+  @include breakpoint("sm-max") {
+    padding: 0;
+  }
+
+  .footerTopDetails {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 74px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 100px;
+
+    @include breakpoint("md-max") {
+      padding: 50px 0;
+    }
+
+    @include breakpoint("sm-max") {
+      padding: 20px 0;
+    }
+
+    .footerLogo {
+      width: 186px;
+      height: 82px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      text-transform: capitalize;
+      cursor: pointer;
+      text-decoration: none;
+
+      @include breakpoint("sm-max") {
+        width: 80px;
+        height: 32px;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        cursor: pointer;
+        object-fit: contain;
+      }
+    }
+
+    .footerRightSide {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include breakpoint("sm-max") {
+        gap: 12px;
+      }
+
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: capitalize;
+        cursor: pointer;
+        text-decoration: none;
+
+        @include breakpoint("sm-max") {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+
+  .footerBottomDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 0 0;
+    margin: 20px 100px;
+
+
+    @include breakpoint("sm-max") {
+      flex-direction: column;
+      gap: 18px;
+      padding: 20px 0 0 0;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      text-transform: capitalize;
+
+      @include breakpoint("sm-max") {
+        font-size: 14px;
+      }
+    }
+
+    .followUsSectionAlignment {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+
+      @include breakpoint("sm-max") {
+        gap: 18px;
+      }
+
+      .allMediaIcon {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include breakpoint("sm-max") {
+          gap: 16px;
+        }
+
+        .iconAlignment {
+          width: 28px;
+          height: 28px;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

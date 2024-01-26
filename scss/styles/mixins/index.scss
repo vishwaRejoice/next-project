@@ -1,0 +1,22 @@
+@import "breakpoints";
+@import "typography";
+@import "input";
+@import "layout";
+@import "../container/container.scss";
+@import "../font/font.scss";
+@import "../theme";
+@import "../variables";
+@import "../button/button";
+@import "../input/input";
+@import "pdfPreview";
+
+.error-message {
+  padding: 6px 0 0 0;
+
+  p {
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: red !important;
+    text-align: left !important;
+  }
+}

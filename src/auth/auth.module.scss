@@ -1,0 +1,52 @@
+@import "../../scss/styles/mixins/index.scss";
+
+
+.myGtpDetailsBox {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.07);
+    padding: 50px 25px;
+    // margin-top: 130px;
+    margin: 150px 100px;
+
+    @include breakpoint("sm-max") {
+      padding: 20px;
+    }
+
+    h2 {
+      color: rgba(255, 255, 255, 0.95);
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21px;
+      max-width: 914px;
+      margin: 0 auto;
+      padding: 0 0 40px 0;
+
+      @include breakpoint("sm-max") {
+        font-size: 14px;
+        line-height: 21px;
+        padding: 0 0 30px 0;
+      }
+    }
+
+    .myGtpSignInButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        padding: 12px 35px;
+        border-radius: 8px;
+        background: #2BF6FA;
+        color: #1E1E1E;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        text-transform: capitalize;
+        cursor: pointer;
+        border: none;
+      }
+    }
+  }

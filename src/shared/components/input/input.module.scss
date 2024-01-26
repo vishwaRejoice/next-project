@@ -1,0 +1,119 @@
+@import "../../../../scss/styles/mixins/index.scss";
+
+
+.input {
+  label {
+    color: rgba(255, 255, 255, 0.97);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: capitalize;
+    display: block;
+    padding: 0 0 8px 0;
+
+    @include breakpoint("sm-max") {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  .inputFlex {
+    position: relative;
+
+    .iconAlignment {
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      width: 32px;
+      height: 24px;
+      min-width: 32px;
+      max-width: 32px;
+      padding: 0 8px 0 0;
+      border-right: 1px solid #a0a0a0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .passwordIcon {
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+
+
+  }
+
+  input {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.10);
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 500;
+    padding: 0 16px;
+    transition: 0.3s ease-in-out;
+    padding: 0 0 0 54px;
+
+
+    @include breakpoint("sm-max") {
+      font-size: 14px;
+      line-height: 21px;
+
+    }
+
+
+
+    &:focus {
+      outline: none;
+      border: 1px solid #2BF6FA;
+    }
+
+
+    @include breakpoint("sm-max") {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  ::placeholder {
+    font-size: 16px;
+    line-height: 20px;
+    color: #888;
+
+    @include breakpoint("sm-max") {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  &.withOutIcon {
+    padding: 0 16px;
+
+    .iconAlignment {
+      border-right: none;
+    }
+
+    input {
+      padding: 0 16px;
+    }
+  }
+}
